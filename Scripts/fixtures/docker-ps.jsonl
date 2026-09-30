@@ -1,0 +1,9 @@
+{"Names":"radarr","Image":"lscr.io/linuxserver/radarr:latest","Ports":"0.0.0.0:7878->7878/tcp, :::7878->7878/tcp"}
+{"Names":"immich_server","Image":"ghcr.io/immich-app/immich-server:release","Ports":"0.0.0.0:2284->2283/tcp"}
+{"Names":"plex","Image":"plexinc/pms-docker","Ports":""}
+{"Names":"sab","Image":"lscr.io/linuxserver/sabnzbd","Ports":"0.0.0.0:9999->9090/tcp"}
+{"Names":"grafana","Image":"grafana/grafana","Ports":"0.0.0.0:3000->3000/tcp"}
+{"Names":"postgres","Image":"postgres:16","Ports":"5432/tcp"}
+{"Names":"beszel-agent","Image":"henrygd/beszel-agent:latest","Ports":""}
+{"Names":"gluetun","Image":"qmcgaw/gluetun:v3.41","Ports":"0.0.0.0:8000->8000/tcp"}
+{"Names":"jellyseerr","Image":"ghcr.io/fallenbagel/jellyseerr:2.7","Ports":"0.0.0.0:5055->5055/tcp"}

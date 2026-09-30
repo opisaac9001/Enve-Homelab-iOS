@@ -1,0 +1,48 @@
+import Foundation
+
+/// Throwaway material generated for tests only; never used to authenticate anywhere.
+enum Fixtures {
+    static let utcTimeCertificate = Data(base64Encoded: "MIICDzCCAbYCCQDSOo8BFgUjvDAKBggqhkjOPQQDAjAWMRQwEgYDVQQDDAt0b3dlci5sb2NhbDAeFw0yNjA5MjkwNzU3MTFaFw0yNjEwMjkwNzU3MTFaMBYxFDASBgNVBAMMC3Rvd2VyLmxvY2FsMIIBSzCCAQMGByqGSM49AgEwgfcCAQEwLAYHKoZIzj0BAQIhAP////8AAAABAAAAAAAAAAAAAAAA////////////////MFsEIP////8AAAABAAAAAAAAAAAAAAAA///////////////8BCBaxjXYqjqT57PrvVV2mIa8ZR0GsMxTsPY7zjw+J9JgSwMVAMSdNgiG5wSTamZ44ROdJreBn36QBEEEaxfR8uEsQkf4vOblY6RA8ncDfYEt6zOg9KE5RdiYwpZP40Li/hp/m47n60p8D54WK84zV2sxXs7LtkBoN79R9QIhAP////8AAAAA//////////+85vqtpxeehPO5ysL8YyVRAgEBA0IABIuM56QEDqnSGgjTyLF8qMDZ//nBTU2M+l2kpXAJw7DUejf7lrZY7cFwyoVa5Ub7TccxBDmG34UV1ezkjcnnDt4wCgYIKoZIzj0EAwIDRwAwRAIgUCxiRbkybWxO+7+CfgtxsLnFysYKIhf7JBdBJ4gOBmgCIAPB+yVod5dE9WTWUNijWxXao/ge7Z3KWTh8vPTBycj2")!
+    static let utcTimeNotBefore = Date(timeIntervalSince1970: 1790668631)
+    static let utcTimeNotAfter = Date(timeIntervalSince1970: 1793260631)
+    static let utcTimeFingerprint = "52:C7:20:C7:26:A1:48:6C:AD:CA:14:78:7C:6B:2C:7A:2C:2F:84:7D:7B:CC:DB:9D:5B:DB:5D:8F:3F:70:D5:69"
+
+    static let generalizedTimeCertificate = Data(base64Encoded: "MIICNjCCAdygAwIBAgIJAN5OWBsyLXDaMAoGCCqGSM49BAMCMBcxFTATBgNVBAMMDGxvbmcuZXhhbXBsZTAgFw0yNjA5MjkwNzU3MzBaGA8yMDgxMDcwMjA3NTczMFowFzEVMBMGA1UEAwwMbG9uZy5leGFtcGxlMIIBSzCCAQMGByqGSM49AgEwgfcCAQEwLAYHKoZIzj0BAQIhAP////8AAAABAAAAAAAAAAAAAAAA////////////////MFsEIP////8AAAABAAAAAAAAAAAAAAAA///////////////8BCBaxjXYqjqT57PrvVV2mIa8ZR0GsMxTsPY7zjw+J9JgSwMVAMSdNgiG5wSTamZ44ROdJreBn36QBEEEaxfR8uEsQkf4vOblY6RA8ncDfYEt6zOg9KE5RdiYwpZP40Li/hp/m47n60p8D54WK84zV2sxXs7LtkBoN79R9QIhAP////8AAAAA//////////+85vqtpxeehPO5ysL8YyVRAgEBA0IABNH3UsKIjnK7WPy5V4qgDq5Ho+yrrpVCdLp5VLHb2diYYf61VNex5n9jMCgriiDwituam+Awfoo8/JdZn8IMMhOjGzAZMBcGA1UdEQQQMA6CDGxvbmcuZXhhbXBsZTAKBggqhkjOPQQDAgNIADBFAiEA7ABkQogdDhZDIAOV0kVoTtVXQ2+69kGBe8c7WVf3tKICICHqD2I/baICp2sJt3bpMtGBHSgWc6bjJ6A2/gnSnt6e")!
+    static let generalizedTimeNotAfter = Date(timeIntervalSince1970: 3518668650)
+
+    static let ed25519PrivateKey = """
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACBvMgoUNaqspljMBcTIL9YssXvAp+f4V2YJ87YP7/GlzAAAAJCxm7qdsZu6
+nQAAAAtzc2gtZWQyNTUxOQAAACBvMgoUNaqspljMBcTIL9YssXvAp+f4V2YJ87YP7/GlzA
+AAAECksbJYHhh4+dvBifOrGTSgcekPrjbk7dhVcrsThMGBOG8yChQ1qqymWMwFxMgv1iyx
+e8Cn5/hXZgnztg/v8aXMAAAAB2ZpeHR1cmUBAgMEBQY=
+-----END OPENSSH PRIVATE KEY-----
+"""
+    static let ed25519PublicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG8yChQ1qqymWMwFxMgv1iyxe8Cn5/hXZgnztg/v8aXM fixture"
+    static let ed25519Fingerprint = "SHA256:GW+NZxwfkb2Z3vXVB5irzfTGmVF1hkQkwL9cgjnXo1A"
+
+    static let ecdsaPrivateKey = """
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAaAAAABNlY2RzYS
+1zaGEyLW5pc3RwMjU2AAAACG5pc3RwMjU2AAAAQQSCttRBHBIjClRxbYzHeDL2JZjLcWGO
+KKYll0mXWM6/ysHl7WjP4AkFaXqXoHcDHD18Ifk24QiWYz4F6u7JYnEeAAAAoH+zLPt/sy
+z7AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIK21EEcEiMKVHFt
+jMd4MvYlmMtxYY4opiWXSZdYzr/KweXtaM/gCQVpepegdwMcPXwh+TbhCJZjPgXq7slicR
+4AAAAgLP3ZLjSJYjwu/lPOkGlEuxZc/RTCf89+HjLHDJJuG44AAAAHZml4dHVyZQE=
+-----END OPENSSH PRIVATE KEY-----
+"""
+    static let ecdsaPublicKey = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIK21EEcEiMKVHFtjMd4MvYlmMtxYY4opiWXSZdYzr/KweXtaM/gCQVpepegdwMcPXwh+TbhCJZjPgXq7slicR4= fixture"
+    static let ecdsaFingerprint = "SHA256:gK+UFIBkz0Ng4bCiemMA/tPHWg72fNVwixcqp5i4OmY"
+
+    static let encryptedPrivateKey = """
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABCTKCAZGp
+YZupk9+SSQsFi5AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIAh21vOzsp8B7EjR
+/ieqfzqJn4lXzZJkTezQ5NuXkF8iAAAAkMK3eEPolBhJKtXGA0K5xsd7iraTkMOdUCFFyk
+wznpWE2r7cSicuHB6IYTsEK4k9q4d5I4UCN/35hxIvmuGVsfpY4pZ5mu1w28XlgbMQfsaA
+gJ3pEZQlwjk0OSXrz6Je+E2wKbLxESzi8w13KIuC2vjdu42lSGpbtoDNUVpS5GhvoB/Q+v
+kQQEO066EEK96x0Q==
+-----END OPENSSH PRIVATE KEY-----
+"""
+}

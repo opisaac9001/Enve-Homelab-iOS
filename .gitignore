@@ -1,0 +1,13 @@
+.DS_Store
+CLAUDE.md
+DerivedData/
+build/
+*.xcresult
+*.log
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+.swiftpm/
+SourcePackages/
+*.ipa
+*.dSYM.zip

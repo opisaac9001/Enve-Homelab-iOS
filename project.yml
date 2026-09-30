@@ -1,0 +1,141 @@
+name: EnveHomelab
+options:
+  bundleIdPrefix: com.isaaclamb
+  deploymentTarget:
+    iOS: "17.0"
+packages:
+  NIO:
+    url: https://github.com/apple/swift-nio.git
+    exactVersion: 2.103.0
+  NIOSSH:
+    url: https://github.com/apple/swift-nio-ssh.git
+    exactVersion: 0.15.0
+  SwiftCollections:
+    url: https://github.com/apple/swift-collections.git
+    exactVersion: 1.3.0
+  SwiftTerm:
+    url: https://github.com/migueldeicaza/SwiftTerm.git
+    exactVersion: 1.11.2
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "0.1"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+targets:
+  EnveHomelab:
+    type: application
+    platform: iOS
+    sources:
+      - path: EnveHomelab
+      - path: Shared
+      - path: Scripts/enve-companion-export.py
+        buildPhase: resources
+    entitlements:
+      path: EnveHomelab/Resources/EnveHomelab.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.isaaclamb.EnveHomelab
+    dependencies:
+      - target: EnveHomelabWidgets
+      - package: NIO
+        product: NIOCore
+      - package: NIO
+        product: NIOPosix
+      - package: NIOSSH
+      - package: SwiftTerm
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.isaaclamb.EnveHomelab
+        DEVELOPMENT_TEAM: 9TT6DBK8W3
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Enve Homelab
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: Enve Homelab connects to servers you add on your local network.
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        TARGETED_DEVICE_FAMILY: "1,2"
+    info:
+      path: EnveHomelab/Resources/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSFaceIDUsageDescription: Enve Homelab uses Face ID to confirm it's you before switching back to the Owner profile.
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        BGTaskSchedulerPermittedIdentifiers:
+          - com.isaaclamb.EnveHomelab.refresh
+        UIBackgroundModes:
+          - fetch
+        NSBonjourServices:
+          - _ssh._tcp
+          - _home-assistant._tcp
+          - _http._tcp
+          - _https._tcp
+        CFBundleURLTypes:
+          - CFBundleURLName: com.isaaclamb.EnveHomelab
+            CFBundleURLSchemes:
+              - envehomelab
+    scheme:
+      testTargets:
+        - EnveHomelabTests
+        - EnveHomelabUITests
+  EnveHomelabWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: EnveHomelabWidgets
+      - path: Shared
+    entitlements:
+      path: EnveHomelabWidgets/EnveHomelabWidgets.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.isaaclamb.EnveHomelab
+    info:
+      path: EnveHomelabWidgets/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDisplayName: Enve Homelab
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.isaaclamb.EnveHomelab.Widgets
+        DEVELOPMENT_TEAM: 9TT6DBK8W3
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Enve Homelab
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SKIP_INSTALL: YES
+  EnveHomelabTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: EnveHomelabTests
+    dependencies:
+      - target: EnveHomelab
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.isaaclamb.EnveHomelabTests
+        DEVELOPMENT_TEAM: 9TT6DBK8W3
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+  EnveHomelabUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: EnveHomelabUITests
+    dependencies:
+      - target: EnveHomelab
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.isaaclamb.EnveHomelabUITests
+        DEVELOPMENT_TEAM: 9TT6DBK8W3
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
