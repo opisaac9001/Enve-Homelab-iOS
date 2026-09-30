@@ -8,11 +8,15 @@ The app connects directly to the servers and services you add. Credentials are s
 
 These iPhone Air screenshots use the app's labelled sample data. They contain no live server information.
 
-| Overview | Storage | Docker | Add a connection |
-|---|---|---|---|
-| <img src="docs/screenshots/01-unraid-overview.png" alt="Unraid overview with system load and alerts" width="220"> | <img src="docs/screenshots/02-storage.png" alt="Array capacity and parity status" width="220"> | <img src="docs/screenshots/03-docker.png" alt="Docker containers and port conflict" width="220"> | <img src="docs/screenshots/05-connect.png" alt="Find a service by address" width="220"> |
+| Screen | Light | Dark |
+|---|---|---|
+| Overview | <img src="docs/screenshots/01-unraid-overview.png" alt="Unraid overview in light mode" width="260"> | <img src="docs/screenshots/04-unraid-overview-dark.png" alt="Unraid overview in dark mode" width="260"> |
+| Storage | <img src="docs/screenshots/02-storage.png" alt="Storage and parity in light mode" width="260"> | <img src="docs/screenshots/06-storage-dark.png" alt="Storage and parity in dark mode" width="260"> |
+| Docker | <img src="docs/screenshots/03-docker.png" alt="Docker containers in light mode" width="260"> | <img src="docs/screenshots/07-docker-dark.png" alt="Docker containers in dark mode" width="260"> |
 
-[View the dark appearance](docs/screenshots/04-unraid-overview-dark.png).
+### Connection setup
+
+<img src="docs/screenshots/05-connect.png" alt="Find a service by address" width="260">
 
 ## What it does
 
