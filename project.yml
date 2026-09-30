@@ -30,7 +30,7 @@ targets:
     sources:
       - path: EnveHomelab
       - path: Shared
-      - path: Scripts/enve-companion-export.py
+      - path: Scripts/petty-companion-export.py
         buildPhase: resources
     entitlements:
       path: EnveHomelab/Resources/EnveHomelab.entitlements
@@ -51,8 +51,8 @@ targets:
         DEVELOPMENT_TEAM: 9TT6DBK8W3
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: Enve Homelab
-        INFOPLIST_KEY_NSLocalNetworkUsageDescription: Enve Homelab connects to servers you add on your local network.
+        INFOPLIST_KEY_CFBundleDisplayName: "Petty: Homelab"
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Petty: Homelab connects to servers you add on your local network."
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
@@ -65,7 +65,7 @@ targets:
       properties:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
-        NSFaceIDUsageDescription: Enve Homelab uses Face ID to confirm it's you before switching back to the Owner profile.
+        NSFaceIDUsageDescription: "Petty: Homelab uses Face ID to confirm it's you before switching back to the Owner profile."
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: true
         BGTaskSchedulerPermittedIdentifiers:
@@ -101,7 +101,7 @@ targets:
       properties:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
-        CFBundleDisplayName: Enve Homelab
+        CFBundleDisplayName: "Petty: Homelab"
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:
@@ -110,7 +110,7 @@ targets:
         DEVELOPMENT_TEAM: 9TT6DBK8W3
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: Enve Homelab
+        INFOPLIST_KEY_CFBundleDisplayName: "Petty: Homelab"
         TARGETED_DEVICE_FAMILY: "1,2"
         SKIP_INSTALL: YES
   EnveHomelabTests:

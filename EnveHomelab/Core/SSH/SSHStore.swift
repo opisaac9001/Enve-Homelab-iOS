@@ -93,7 +93,7 @@ final class SSHStore {
         let info = SSHKeyInfo(
             name: name,
             algorithm: material.algorithm,
-            publicKey: try OpenSSHKeys.authorizedKeysLine(for: material, comment: "enve-homelab-\(name.replacingOccurrences(of: " ", with: "-").lowercased())"),
+            publicKey: try OpenSSHKeys.authorizedKeysLine(for: material, comment: "petty-homelab-\(name.replacingOccurrences(of: " ", with: "-").lowercased())"),
             fingerprint: OpenSSHKeys.fingerprint(ofBlob: blob),
             createdAt: .now
         )

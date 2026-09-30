@@ -334,7 +334,7 @@ enum IntegrationKind: String, Codable, CaseIterable, Identifiable, Sendable {
         case .immich: "Account Settings › API Keys. Give it server.about, server.storage, server.statistics, job.read and job.create (or all); job and statistics access also needs an admin."
         case .wizarr: "Settings › API Keys › Create (Wizarr 2025.8.3 or later)."
         case .glances: "Only if Glances runs with --password. The default username is “glances”."
-        case .crowdsec: "Create a dedicated key with “cscli bouncers add enve-homelab” on the CrowdSec host. Don't reuse a firewall bouncer's key."
+        case .crowdsec: "Create a dedicated key with “cscli bouncers add petty-homelab” on the CrowdSec host. Don't reuse a firewall bouncer's key."
         case .synology: "A DSM account without two-factor sign-in. Create one just for this app with access to Download Station and Virtual Machine Manager only."
         case .dockhand: "Profile › API tokens › Generate token (Dockhand 1.0.25 or later, with authentication turned on)."
         case .komodo: "Settings › API keys. For least privilege, ask an admin to create a Service User with Read and Execute on the resources you want."

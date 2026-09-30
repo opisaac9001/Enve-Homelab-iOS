@@ -102,7 +102,7 @@ protocol KavitaOperations: Sendable {
 /// Kavita's documented plugin flow: exchange the user's auth key for a JWT, then use Bearer auth.
 final class KavitaClient: DashboardService, KavitaOperations {
     let kind = IntegrationKind.kavita
-    static let pluginName = "Enve Homelab"
+    static let pluginName = "Petty: Homelab"
     private let rest: RESTClient
     private let apiKey: String
     private let session = OSAllocatedUnfairLock<(token: String?, version: String?)>(initialState: (nil, nil))

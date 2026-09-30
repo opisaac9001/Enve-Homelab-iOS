@@ -46,7 +46,7 @@
 		<string>_https._tcp</string>
 	</array>
 	<key>NSFaceIDUsageDescription</key>
-	<string>Enve Homelab uses Face ID to confirm it's you before switching back to the Owner profile.</string>
+	<string>Petty: Homelab uses Face ID to confirm it's you before switching back to the Owner profile.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

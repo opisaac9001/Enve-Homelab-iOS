@@ -104,7 +104,7 @@ protocol SynologyOperations: Sendable {
 /// Synology DSM through its documented Web APIs only: discovery, sign-in, Download Station and Virtual Machine Manager.
 final class SynologyClient: DashboardService, SynologyOperations {
     let kind = IntegrationKind.synology
-    static let deviceName = "Enve Homelab"
+    static let deviceName = "Petty: Homelab"
     private let rest: RESTClient
     private let account: String
     private let password: String

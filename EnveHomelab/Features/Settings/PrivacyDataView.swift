@@ -22,7 +22,7 @@ struct PrivacyDataView: View {
             }
 
             Section("Credentials") {
-                Text("API keys, tokens, passwords and SSH private keys live only in the Keychain, marked for this device only: they're never restored onto another device and never included in Enve Homelab backup files. Each one is sent only to the server it belongs to.")
+                Text("API keys, tokens, passwords and SSH private keys live only in the Keychain, marked for this device only: they're never restored onto another device and never included in Petty: Homelab backup files. Each one is sent only to the server it belongs to.")
             }
 
             Section("Widgets and notifications") {
@@ -63,7 +63,7 @@ private struct EraseAllDataSheet: View {
                     Label("This can't be undone", systemImage: "exclamationmark.triangle.fill")
                         .foregroundStyle(.red)
                         .font(.headline)
-                    Text("Everything Enve Homelab stores on this device is deleted: \(app.store.profiles.count) servers, \(app.integrations.instances.count) integrations, \(app.serviceChecks.checks.count) checks, SSH hosts and keys, alerts, profiles and all Keychain credentials. The app then starts fresh. Export a backup first if you want to restore your setup later; credentials are never in backups.")
+                    Text("Everything Petty: Homelab stores on this device is deleted: \(app.store.profiles.count) servers, \(app.integrations.instances.count) integrations, \(app.serviceChecks.checks.count) checks, SSH hosts and keys, alerts, profiles and all Keychain credentials. The app then starts fresh. Export a backup first if you want to restore your setup later; credentials are never in backups.")
                 }
                 Section {
                     TextField(Self.phrase, text: $typed)

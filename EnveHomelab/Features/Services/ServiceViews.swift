@@ -205,7 +205,7 @@ struct ServiceDetailView: View {
                     }
                 }
 
-                Text("Checks run at their interval while Enve Homelab is open, and again when iOS gives it background refresh time. The latest \(ServiceHealthMonitor.historyLimit) results are kept on this device.")
+                Text("Checks run at their interval while Petty: Homelab is open, and again when iOS gives it background refresh time. The latest \(ServiceHealthMonitor.historyLimit) results are kept on this device.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .padding(.horizontal, 4)
@@ -383,7 +383,7 @@ struct ServiceEditorView: View {
                             .foregroundStyle(.secondary)
                     }
                 } footer: {
-                    Text("Enve Homelab sends a GET request and reads only the response headers. Redirects are followed.")
+                    Text("Petty: Homelab sends a GET request and reads only the response headers. Redirects are followed.")
                 }
 
                 Section("Healthy when") {

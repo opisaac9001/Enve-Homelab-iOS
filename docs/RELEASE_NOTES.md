@@ -1,6 +1,6 @@
 # Release notes
 
-Enve Homelab is free and open source, with no accounts, tracking or paid tiers. Everything below talks only to servers you add, and credentials stay in this device's Keychain.
+Petty: Homelab is free and open source, with no accounts, tracking or paid tiers. Everything below talks only to servers you add, and credentials stay in this device's Keychain.
 
 ## 0.1 (unreleased)
 

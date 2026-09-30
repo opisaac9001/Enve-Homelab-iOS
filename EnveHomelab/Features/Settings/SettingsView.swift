@@ -66,7 +66,7 @@ struct SettingsView: View {
             } header: {
                 Text("About")
             } footer: {
-                Text("Enve Homelab is free and open source. It has no accounts, analytics, or tracking, and only talks to servers you add.")
+                Text("Petty: Homelab is free and open source. It has no accounts, analytics, or tracking, and only talks to servers you add.")
             }
         }
         .bottomBarPadding()

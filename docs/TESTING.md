@@ -1,6 +1,6 @@
 # Testing and verification evidence
 
-This records how Enve Homelab is verified and the result of the most recent full automated run. The fixture suite exercises each integration against response shapes from product documentation. Separately, Unraid, qBittorrent, Sonarr, Radarr, Lidarr, Prowlarr, Plex, Jellyfin, Emby, Audiobookshelf, and Komga have been connected to running services in the iPhone Air simulator. Those sessions do not verify every management action or physical-device behavior.
+This records how Petty: Homelab is verified and the result of the most recent full automated run. The fixture suite exercises each integration against response shapes from product documentation. Separately, Unraid, qBittorrent, Sonarr, Radarr, Lidarr, Prowlarr, Plex, Jellyfin, Emby, Audiobookshelf, and Komga have been connected to running services in the iPhone Air simulator. Those sessions do not verify every management action or physical-device behavior.
 
 ## Environment of the last run
 

@@ -82,7 +82,7 @@ struct HealthWidgetView: View {
                         Text("Updated \(snapshot.updatedAt, style: .relative) ago").font(.caption).lineLimit(1)
                     }
                 } else {
-                    Text("Open Enve Homelab to add checks.").font(.caption)
+                    Text("Open Petty: Homelab to add checks.").font(.caption)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -128,7 +128,7 @@ struct HealthWidgetView: View {
         } else {
             VStack(alignment: .leading, spacing: 6) {
                 Image(systemName: "server.rack").foregroundStyle(accent).font(.title2)
-                Text("Open Enve Homelab to add service checks or integrations.").font(.caption)
+                Text("Open Petty: Homelab to add service checks or integrations.").font(.caption)
             }
         }
     }
@@ -142,7 +142,7 @@ struct HealthWidget: Widget {
                 .widgetURL(URL(string: "envehomelab://alerts"))
         }
         .configurationDisplayName("Homelab Health")
-        .description("The status Enve Homelab last saw for your service checks and integrations.")
+        .description("The status Petty: Homelab last saw for your service checks and integrations.")
         .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular, .accessoryInline])
     }
 }

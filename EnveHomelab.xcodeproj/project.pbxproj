@@ -62,6 +62,7 @@
 		4B5EB20AC8A900F00C0E2048 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE1D90D3A368431F2CD86A /* PrivacyInfo.xcprivacy */; };
 		4CD23C25E08898C55BF74156 /* ServerMaintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A089608B97C25F88CD080335 /* ServerMaintenance.swift */; };
 		4E36ACC486413964387496C1 /* ConnectionProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B375A1C31538F290D645319F /* ConnectionProbe.swift */; };
+		52836551D3A2EF70C5EDB84B /* petty-companion-export.py in Resources */ = {isa = PBXBuildFile; fileRef = D25E69FC284922A422FEE612 /* petty-companion-export.py */; };
 		54D28D34A59F4D5AD8D167ED /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E080AD7F0F4BAE0AE208DF58 /* DiscoveryView.swift */; };
 		5672E2D2593A98C1C68BB364 /* SystemDiagnosticsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD5C868A97AE4F424A977 /* SystemDiagnosticsViews.swift */; };
 		58823CFEF94B8284B1C0622C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24EDFFE72D1850851F3AD72 /* Assets.xcassets */; };
@@ -140,7 +141,6 @@
 		B1534D19F3A14A3965F75DB5 /* HomeCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FEAA5450E1414E8B04A44 /* HomeCustomizationView.swift */; };
 		B3CFB10672B4B5DB431760FF /* NextDNSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B93243B473C6C3AA0EDE /* NextDNSClient.swift */; };
 		B5DC9B9B66B472021F58D493 /* IntegrationListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8940F884C93D9073EF37D024 /* IntegrationListViews.swift */; };
-		B5FCB273DE59FC640C15B038 /* enve-companion-export.py in Resources */ = {isa = PBXBuildFile; fileRef = 3273E747A8DCEC8090CFD405 /* enve-companion-export.py */; };
 		B62C3B7678D89BD2FD5BC734 /* UnraidClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7A5AF5B74BB8DD89EE013 /* UnraidClient.swift */; };
 		BA1ECCFCD8ACECD87B74526D /* ServerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9D27DAC2F30773E635906 /* ServerListView.swift */; };
 		BAAA45258AD6E4BBBD9E9F11 /* TdarrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50299A6B64C969F739107306 /* TdarrClient.swift */; };
@@ -293,7 +293,6 @@
 		2E9BE049286EC0FAFF0AA7B0 /* ConnectionFailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionFailureView.swift; sourceTree = "<group>"; };
 		2FC661D7860DD0B20E616E7D /* IntegrationKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationKind.swift; sourceTree = "<group>"; };
 		30F30D90ECC963042F0442C3 /* ControlDClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlDClient.swift; sourceTree = "<group>"; };
-		3273E747A8DCEC8090CFD405 /* enve-companion-export.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "enve-companion-export.py"; sourceTree = "<group>"; };
 		33F523257B81932E50B64BE7 /* UnraidQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnraidQueries.swift; sourceTree = "<group>"; };
 		341E0297CFA40A4C39D9DB9F /* NetworkProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderTests.swift; sourceTree = "<group>"; };
 		34DA010A91B127336D8EFE00 /* PlatformSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformSamples.swift; sourceTree = "<group>"; };
@@ -420,6 +419,7 @@
 		CF53CE233B5D3D6773A237BC /* ConnectionDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDiagnostics.swift; sourceTree = "<group>"; };
 		D19A8B1C9B270B4345FD2B47 /* LocalDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDiscovery.swift; sourceTree = "<group>"; };
 		D1F98938608FF49FAEEF022B /* NetworkDiagnosticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDiagnosticsTests.swift; sourceTree = "<group>"; };
+		D25E69FC284922A422FEE612 /* petty-companion-export.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "petty-companion-export.py"; sourceTree = "<group>"; };
 		D2659B073297482C50CB899A /* InfrastructureSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureSamples.swift; sourceTree = "<group>"; };
 		D32188475243B17D15807545 /* ImmichClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmichClient.swift; sourceTree = "<group>"; };
 		D450F7F62C0A17581AAB788B /* InfrastructureProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureProviderTests.swift; sourceTree = "<group>"; };
@@ -529,7 +529,7 @@
 		10D63485805EC69C56A73F34 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				3273E747A8DCEC8090CFD405 /* enve-companion-export.py */,
+				D25E69FC284922A422FEE612 /* petty-companion-export.py */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -1211,7 +1211,7 @@
 			files = (
 				58823CFEF94B8284B1C0622C /* Assets.xcassets in Resources */,
 				4B5EB20AC8A900F00C0E2048 /* PrivacyInfo.xcprivacy in Resources */,
-				B5FCB273DE59FC640C15B038 /* enve-companion-export.py in Resources */,
+				52836551D3A2EF70C5EDB84B /* petty-companion-export.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1501,8 +1501,8 @@
 				DEVELOPMENT_TEAM = 9TT6DBK8W3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnveHomelab/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Enve Homelab";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Enve Homelab connects to servers you add on your local network.";
+				INFOPLIST_KEY_CFBundleDisplayName = "Petty: Homelab";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Petty: Homelab connects to servers you add on your local network.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1525,7 +1525,7 @@
 				DEVELOPMENT_TEAM = 9TT6DBK8W3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnveHomelabWidgets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Enve Homelab";
+				INFOPLIST_KEY_CFBundleDisplayName = "Petty: Homelab";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1568,8 +1568,8 @@
 				DEVELOPMENT_TEAM = 9TT6DBK8W3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnveHomelab/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Enve Homelab";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Enve Homelab connects to servers you add on your local network.";
+				INFOPLIST_KEY_CFBundleDisplayName = "Petty: Homelab";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Petty: Homelab connects to servers you add on your local network.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1671,7 +1671,7 @@
 				DEVELOPMENT_TEAM = 9TT6DBK8W3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnveHomelabWidgets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Enve Homelab";
+				INFOPLIST_KEY_CFBundleDisplayName = "Petty: Homelab";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

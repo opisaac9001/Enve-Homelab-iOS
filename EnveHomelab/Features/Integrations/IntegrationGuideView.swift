@@ -17,7 +17,7 @@ struct IntegrationGuideView: View {
             }
             Section("Permissions") { Text(guide.permissions) }
             Section("Address") { Text(guide.address) }
-            Section("What Enve Homelab reads") { Text(guide.reads) }
+            Section("What Petty: Homelab reads") { Text(guide.reads) }
             Section {
                 if guide.actions.isEmpty {
                     Text("Nothing — this integration is read-only.")

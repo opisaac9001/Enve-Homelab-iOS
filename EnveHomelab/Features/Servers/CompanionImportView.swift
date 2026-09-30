@@ -11,11 +11,11 @@ struct CompanionImportView: View {
     @State private var failure: String?
     @State private var copied = false
 
-    private static let scriptURL = Bundle.main.url(forResource: "enve-companion-export", withExtension: "py")
+    private static let scriptURL = Bundle.main.url(forResource: "petty-companion-export", withExtension: "py")
 
     private var command: String {
         let address = host.trimmingCharacters(in: .whitespaces).isEmpty ? "<this host's address>" : host.trimmingCharacters(in: .whitespaces)
-        return "python3 enve-companion-export.py --host \(address) -o enve-homelab.json" + (includeChecks ? " --include-checks" : "")
+        return "python3 petty-companion-export.py --host \(address) -o petty-homelab.json" + (includeChecks ? " --include-checks" : "")
     }
 
     var body: some View {
@@ -34,7 +34,7 @@ struct CompanionImportView: View {
             } header: {
                 Text("1. Copy the script to the host")
             } footer: {
-                Text("AirDrop it to a Mac, save it to Files or a shared folder, or copy it from Scripts/ in the Enve Homelab source. It needs Python 3.8 or later and access to `docker ps`.")
+                Text("AirDrop it to a Mac, save it to Files or a shared folder, or copy it from Scripts/ in the Petty: Homelab source. It needs Python 3.8 or later and access to `docker ps`.")
             }
 
             Section {
@@ -56,7 +56,7 @@ struct CompanionImportView: View {
                 Button {
                     importing = true
                 } label: {
-                    Label("Choose enve-homelab.json…", systemImage: "doc.badge.plus")
+                    Label("Choose petty-homelab.json…", systemImage: "doc.badge.plus")
                 }
                 if let failure { Text(failure).foregroundStyle(.red) }
             } header: {
@@ -76,7 +76,7 @@ struct CompanionImportView: View {
                 reviewing = PendingImport(backup: try ConfigurationFile.read(result))
                 failure = nil
             } catch {
-                failure = "That file isn't a readable Enve Homelab file. \(error.localizedDescription)"
+                failure = "That file isn't a readable Petty: Homelab file. \(error.localizedDescription)"
             }
         }
         .sheet(item: $reviewing, onDismiss: { dismiss() }) { ImportReviewView(backup: $0.backup) }

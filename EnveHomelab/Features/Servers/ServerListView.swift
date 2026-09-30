@@ -96,7 +96,7 @@ struct ServerListView: View {
                     serverList
                 }
             }
-            .navigationTitle("Enve Homelab")
+            .navigationTitle("Petty: Homelab")
             .navigationDestination(item: $route) { route in
                 switch route {
                 case .settings: SettingsView()

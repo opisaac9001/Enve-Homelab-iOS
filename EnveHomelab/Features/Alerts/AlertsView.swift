@@ -150,7 +150,7 @@ struct NotificationSettingsView: View {
                     Label("Send Test Notification", systemImage: "bell.and.waves.left.and.right")
                 }
                 if testSent {
-                    Text("Sent. If nothing appeared, check Settings › Notifications › Enve Homelab and any active Focus.")
+                    Text("Sent. If nothing appeared, check Settings › Notifications › Petty: Homelab and any active Focus.")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
             } header: {
@@ -339,7 +339,7 @@ private struct NtfySettingsView: View {
     private func sendTest() async {
         guard let configuration else { return }
         let client = NtfyClient(configuration: configuration, token: token.isEmpty ? app.alerts.ntfyToken() : token)
-        let event = AlertEvent(date: .now, severity: .info, sourceKind: .ntfy, sourceID: topic, sourceName: "Enve Homelab", title: "Enve Homelab test", body: "ntfy delivery is working.")
+        let event = AlertEvent(date: .now, severity: .info, sourceKind: .ntfy, sourceID: topic, sourceName: "Petty: Homelab", title: "Petty: Homelab test", body: "ntfy delivery is working.")
         do {
             try await client.publish(event)
             status = "Sent. Check your ntfy subscribers."

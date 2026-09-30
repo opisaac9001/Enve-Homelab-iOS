@@ -14,7 +14,7 @@ struct MediaBrowserClient: MediaServerService {
         let headers: [String: String]
         var base = url
         if kind == .jellyfin {
-            headers = ["Authorization": "MediaBrowser Client=\"Enve Homelab\", Device=\"iOS\", DeviceId=\"\(deviceID.uuidString)\", Version=\"1.0\", Token=\"\(apiKey)\""]
+            headers = ["Authorization": "MediaBrowser Client=\"Petty: Homelab\", Device=\"iOS\", DeviceId=\"\(deviceID.uuidString)\", Version=\"1.0\", Token=\"\(apiKey)\""]
         } else {
             headers = ["X-Emby-Token": apiKey]
             if !url.path.lowercased().hasSuffix("/emby") { base = url.appending(path: "emby") }
@@ -376,7 +376,7 @@ struct MediaBrowserClient: MediaServerService {
         case .removeDevice(let id):
             request = .delete("Devices", query: [URLQueryItem(name: kind == .jellyfin ? "id" : "Id", value: id)])
         case .message(let sessionID, let text):
-            let message = Message(Header: "Enve Homelab", Text: text, TimeoutMs: 10_000)
+            let message = Message(Header: "Petty: Homelab", Text: text, TimeoutMs: 10_000)
             request = kind == .jellyfin
                 ? try .post("Sessions/\(sessionID)/Message", json: message)
                 : .post("Sessions/\(sessionID)/Message", query: [URLQueryItem(name: "Header", value: message.Header), URLQueryItem(name: "Text", value: text),

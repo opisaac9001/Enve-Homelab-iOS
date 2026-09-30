@@ -57,11 +57,11 @@ TLS_FINGERPRINT="$(openssl x509 -in "$WORK/tls.pem" -noout -fingerprint -sha256 
 node "$ROOT/Scripts/integration-fixture-server.mjs" "$PROVIDER_PORT" "$PROVIDER_TLS_PORT" "$WORK/tls.pem" "$WORK/tls.key" > "$WORK/providers.log" 2>&1 &
 PROVIDER_PID=$!
 
-python3 "$ROOT/Scripts/enve-companion-export.py" --host 192.168.1.20 --include-checks \
+python3 "$ROOT/Scripts/petty-companion-export.py" --host 192.168.1.20 --include-checks \
   --input "$ROOT/Scripts/fixtures/docker-ps.jsonl" -o "$WORK/companion.json" > /dev/null
 # A second run over the same containers, with one port changed, checks that re-runs are recognised.
 sed 's/0.0.0.0:7878->7878/0.0.0.0:7879->7878/' "$ROOT/Scripts/fixtures/docker-ps.jsonl" > "$WORK/docker-ps-rerun.jsonl"
-python3 "$ROOT/Scripts/enve-companion-export.py" --host 192.168.1.20 --include-checks \
+python3 "$ROOT/Scripts/petty-companion-export.py" --host 192.168.1.20 --include-checks \
   --input "$WORK/docker-ps-rerun.jsonl" -o "$WORK/companion-rerun.json" > /dev/null
 
 print -r -- "$SSH_PORT" > "$WORK/ssh_port"

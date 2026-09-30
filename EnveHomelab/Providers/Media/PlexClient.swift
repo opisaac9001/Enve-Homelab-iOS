@@ -13,7 +13,7 @@ struct PlexClient: MediaServerService {
         rest = RESTClient(baseURL: url, pinnedFingerprint: pinnedFingerprint, headers: [
             "X-Plex-Token": token,
             "X-Plex-Client-Identifier": clientID.uuidString,
-            "X-Plex-Product": "Enve Homelab",
+            "X-Plex-Product": "Petty: Homelab",
         ])
     }
 

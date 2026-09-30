@@ -138,7 +138,7 @@ private struct LossyList<Element: Decodable>: Decodable {
 enum BackupError: Error, LocalizedError {
     case newerFormat
 
-    var errorDescription: String? { "This backup was made by a newer version of Enve Homelab." }
+    var errorDescription: String? { "This backup was made by a newer version of Petty: Homelab." }
 }
 
 @MainActor

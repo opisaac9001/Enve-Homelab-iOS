@@ -278,9 +278,9 @@ struct MediaServerView: View {
             Button(role: .destructive) {
                 pending = .integration(instance, title: "Stop Stream", systemImage: "xmark.circle", targetKind: "Session",
                                        targetName: "\(session.title) — \(session.user ?? "user")",
-                                       consequence: "Plex ends this stream and shows the viewer “Stopped from Enve Homelab”. Plex only allows this on servers with Plex Pass.",
+                                       consequence: "Plex ends this stream and shows the viewer “Stopped from Petty: Homelab”. Plex only allows this on servers with Plex Pass.",
                                        destructive: true) { [service] in
-                    try await service.terminate(sessionID: session.id, reason: "Stopped from Enve Homelab")
+                    try await service.terminate(sessionID: session.id, reason: "Stopped from Petty: Homelab")
                 }
             } label: {
                 Label("Stop Stream…", systemImage: "xmark.circle")

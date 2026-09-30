@@ -644,7 +644,7 @@ final class PreviewFlowUITests: XCTestCase {
         XCTAssertTrue(host.waitForExistence(timeout: 5))
         host.tap()
         host.typeText("192.168.1.20")
-        XCTAssertTrue(element(containing: "--host 192.168.1.20 -o enve-homelab.json").exists, "The command uses the address typed")
+        XCTAssertTrue(element(containing: "--host 192.168.1.20 -o petty-homelab.json").exists, "The command uses the address typed")
         XCTAssertTrue(app.buttons["Save the Script…"].exists, "The script ships inside the app")
         snapshot("83-docker-import")
         app.buttons["Close"].firstMatch.tap()

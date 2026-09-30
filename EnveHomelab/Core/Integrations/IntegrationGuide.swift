@@ -359,7 +359,7 @@ extension IntegrationKind {
             )
         case .crowdsec:
             IntegrationGuide(
-                steps: ["On the CrowdSec host, run: cscli bouncers add enve-homelab", "Copy the key it prints.", "Make the Local API reachable from this device (it listens on 127.0.0.1:8080 by default)."],
+                steps: ["On the CrowdSec host, run: cscli bouncers add petty-homelab", "Copy the key it prints.", "Make the Local API reachable from this device (it listens on 127.0.0.1:8080 by default)."],
                 permissions: "Bouncer keys can only read decisions. Use a dedicated key: sharing a firewall bouncer's key can confuse its updates.",
                 address: "http(s)://<host>:8080.",
                 reads: "Local API health and active decisions made by your CrowdSec instance and cscli, grouped by scenario.",

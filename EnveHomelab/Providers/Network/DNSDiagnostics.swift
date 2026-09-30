@@ -232,7 +232,7 @@ extension PiholeClient: DNSDiagnosticsService {
             var enabled = true
         }
         try await withSession { headers in
-            _ = try await rest.data(sessioned(try .post("domains/allow/exact", json: Body(domain: domain, comment: "Allowed from Enve Homelab")), headers: headers))
+            _ = try await rest.data(sessioned(try .post("domains/allow/exact", json: Body(domain: domain, comment: "Allowed from Petty: Homelab")), headers: headers))
         }
     }
 }

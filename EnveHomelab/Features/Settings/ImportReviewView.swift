@@ -22,7 +22,7 @@ struct PendingImport: Identifiable {
 
 enum ConfigurationFileError: Error, LocalizedError {
     case tooLarge
-    var errorDescription: String? { "That file is too large to be an Enve Homelab file." }
+    var errorDescription: String? { "That file is too large to be a Petty: Homelab file." }
 }
 
 /// Lists every item in an imported file so the user picks what to add, then walks them through the credentials still needed.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Enve Homelab companion export.
+"""Petty: Homelab companion export.
 
-Run on a Docker host to list its containers as Enve Homelab integrations and service
+Run on a Docker host to list its containers as Petty: Homelab integrations and service
 checks, written in the app's backup format. Import it from Add > Import from Docker Host
 (or Settings > Backup & Sharing > Import a File), choose what to add, then enter each API key.
 Nothing already set up is replaced.
@@ -10,7 +10,7 @@ Privacy: this reads only `docker ps` (names, images, published ports). It never 
 environment variables, volumes, logs or secrets, never opens a network connection,
 and writes only the file you name. Python 3.8+ standard library only.
 
-    python3 enve-companion-export.py --host 192.168.1.20 -o enve-homelab.json
+    python3 petty-companion-export.py --host 192.168.1.20 -o petty-homelab.json
 """
 
 import argparse
@@ -174,7 +174,7 @@ def read_containers(path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Export this Docker host's services for Enve Homelab.")
+    parser = argparse.ArgumentParser(description="Export this Docker host's services for Petty: Homelab.")
     parser.add_argument("--host", required=True, help="address the phone uses to reach this host, e.g. 192.168.1.20 or tower.local")
     parser.add_argument("-o", "--output", required=True, help="file to write")
     parser.add_argument("--include-checks", action="store_true", help="also add HTTP health checks for other containers with web ports")
@@ -194,7 +194,7 @@ def main():
     print(f"Wrote {len(backup['integrations'])} integrations and {len(backup['serviceChecks'])} service checks to {args.output}.")
     for line in skipped:
         print(f"Skipped {line}")
-    print("No credentials were read or written. Add API keys in Enve Homelab after importing the file.")
+    print("No credentials were read or written. Add API keys in Petty: Homelab after importing the file.")
 
 
 if __name__ == "__main__":

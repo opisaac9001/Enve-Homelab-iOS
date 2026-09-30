@@ -1,4 +1,4 @@
-# Enve Homelab
+# Petty: Homelab
 
 A homelab dashboard for iPhone, iPad, and Apple-silicon Macs. Monitor Unraid and the services around it, inspect what needs attention, and carry out routine maintenance from one place.
 
@@ -177,7 +177,7 @@ Each integration's editor links to an in-app setup guide for that product. The g
   - Unsafe or unreadable entries are counted and left out. After importing, an **Enter credentials** checklist opens each server's, integration's or SSH host's editor and ticks off the ones whose credentials are now in the Keychain.
 - **Household sharing:** Settings › Backup & Sharing › Share with Household makes a file with only the servers, integrations and service checks you pick, marked as a household file. It never includes credentials, SSH hosts or notification rules, and it goes out through the share sheet (AirDrop, Messages, Files); there is no server, account or relay. On the other device, the import explains that the person should use their own limited keys. Certificate fingerprints and SSH host keys in household and companion files aren't trusted on import: each self-signed certificate is reviewed on the receiving device when it first connects. Once their credentials are in, it offers to switch that device to a View Only profile, by default limited to the items the file added, showing the same warning as Settings › Profiles about who can switch back. View Only is a convenience, not a lock; limited API keys are the real restriction.
 - **Companion import (optional):** Add › Import from Docker Host (also on the empty home screen) walks through three steps:
-  1. **Save the script.** `enve-companion-export.py` ships inside the app; save or AirDrop it to the host.
+  1. **Save the script.** `petty-companion-export.py` ships inside the app; save or AirDrop it to the host.
   2. **Run it on the host.** The screen builds the command from the address you type, and you can copy it.
   3. **Pick the file.** Choose the exported file to open the import review.
   The script reads `docker ps` (names, images and published ports only), recognises services including Seerr, Overseerr and Jellyseerr, and marks its output as a companion file. Each service's ID is derived from the host, kind and container name, so re-running the script lists the same IDs: the import review then shows what's already set up and offers port changes as updates instead of adding duplicates. It never reads environment variables, volumes or secrets, never opens a network connection, and needs only Python 3.8+. Its output goes through the same validation as backups, and the integration tests run the script and check its output.
@@ -387,4 +387,4 @@ Use an exact UDID from `xcrun simctl list devices`, because simulator names can 
 
 ## License
 
-Enve Homelab's original source is licensed under the [GNU Affero General Public License v3.0 only](LICENSE.md) (`AGPL-3.0-only`). Third-party dependencies retain their own licenses, listed above.
+Petty: Homelab's original source is licensed under the [GNU Affero General Public License v3.0 only](LICENSE.md) (`AGPL-3.0-only`). Third-party dependencies retain their own licenses, listed above.

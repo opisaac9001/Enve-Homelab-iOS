@@ -159,8 +159,8 @@ final class AlertCenter {
     }
 
     static var testEvent: AlertEvent {
-        AlertEvent(date: .now, severity: .warning, sourceKind: .serviceCheck, sourceID: "test", sourceName: "Enve Homelab",
-                   title: "Test alert from Enve Homelab", body: "If you can read this, alerts reach you here.")
+        AlertEvent(date: .now, severity: .warning, sourceKind: .serviceCheck, sourceID: "test", sourceName: "Petty: Homelab",
+                   title: "Test alert from Petty: Homelab", body: "If you can read this, alerts reach you here.")
     }
 
     func hasNtfyToken() -> Bool {

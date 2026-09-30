@@ -55,7 +55,7 @@ struct BackupView: View {
             do {
                 reviewing = PendingImport(backup: try ConfigurationFile.read(result))
             } catch {
-                message = "That file isn't a readable Enve Homelab file. \(error.localizedDescription)"
+                message = "That file isn't a readable Petty: Homelab file. \(error.localizedDescription)"
             }
         }
         .sheet(item: $reviewing) { ImportReviewView(backup: $0.backup) }
@@ -64,7 +64,7 @@ struct BackupView: View {
 
     private func prepareExport() {
         do {
-            let url = FileManager.default.temporaryDirectory.appending(path: "Enve Homelab Backup \(Date.now.formatted(.iso8601.year().month().day())).json")
+            let url = FileManager.default.temporaryDirectory.appending(path: "Petty Homelab Backup \(Date.now.formatted(.iso8601.year().month().day())).json")
             try app.makeBackup().encoded().write(to: url, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
             exportURL = url
         } catch {
@@ -125,7 +125,7 @@ struct HouseholdShareView: View {
 
     private func create() {
         do {
-            let url = FileManager.default.temporaryDirectory.appending(path: "Enve Homelab Household \(Date.now.formatted(.iso8601.year().month().day())).json")
+            let url = FileManager.default.temporaryDirectory.appending(path: "Petty Homelab Household \(Date.now.formatted(.iso8601.year().month().day())).json")
             try app.makeHouseholdShare(including: selected).encoded().write(to: url, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
             shareURL = url
             failure = nil
